@@ -1,4 +1,4 @@
-package ru.merkulyevsasha.domain;
+package ru.merkulyevsasha.domain.program;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import javax.inject.Inject;
 
 import io.reactivex.Scheduler;
 import io.reactivex.Single;
-import ru.merkulyevsasha.domain_interfaces.ProgramInteractor;
-import ru.merkulyevsasha.domain_interfaces.ProgramSearchItem;
+import ru.merkulyevsasha.domain_interfaces.program.ProgramInteractor;
+import ru.merkulyevsasha.domain_interfaces.program.ProgramSearchItem;
 import ru.merkulyevsasha.repository_interfaces.ProgramRepository;
 
 /**

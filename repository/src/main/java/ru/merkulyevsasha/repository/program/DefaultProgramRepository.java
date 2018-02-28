@@ -1,4 +1,4 @@
-package ru.merkulyevsasha.repository;
+package ru.merkulyevsasha.repository.program;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.concurrent.Callable;
 import javax.inject.Inject;
 
 import io.reactivex.Single;
-import ru.merkulyevsasha.domain_interfaces.ProgramSearchItem;
+import ru.merkulyevsasha.domain_interfaces.program.ProgramSearchItem;
 import ru.merkulyevsasha.repository_interfaces.ProgramRepository;
 
 public class DefaultProgramRepository implements ProgramRepository {

@@ -3,7 +3,7 @@ package ru.merkulyevsasha.uniapp.presentation.program;
 import javax.inject.Inject;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import ru.merkulyevsasha.domain_interfaces.ProgramInteractor;
+import ru.merkulyevsasha.domain_interfaces.program.ProgramInteractor;
 import ru.merkulyevsasha.uniapp.presentation.commons.BasePresenter;
 import ru.merkulyevsasha.uniapp.presentation.dto.ProgramSearchItemUI;
 
