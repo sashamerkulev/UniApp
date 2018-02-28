@@ -3,7 +3,7 @@ package ru.merkulyevsasha.repository_interfaces;
 import java.util.List;
 
 import io.reactivex.Single;
-import ru.merkulyevsasha.domain_interfaces.ProgramSearchItem;
+import ru.merkulyevsasha.domain_interfaces.program.ProgramSearchItem;
 
 public interface ProgramRepository {
 

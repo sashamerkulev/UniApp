@@ -1,4 +1,4 @@
-package ru.merkulyevsasha.domain_interfaces;
+package ru.merkulyevsasha.domain_interfaces.program;
 
 import java.util.List;
 

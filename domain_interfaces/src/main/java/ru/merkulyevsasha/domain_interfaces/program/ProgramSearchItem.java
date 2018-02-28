@@ -1,4 +1,4 @@
-package ru.merkulyevsasha.domain_interfaces;
+package ru.merkulyevsasha.domain_interfaces.program;
 
 /**
  * Created by sasha_merkulev on 27.02.2018.
