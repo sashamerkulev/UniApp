@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        >
+
+        <ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabelControl
+            android:id="@+id/levelstudyspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_of_study_title"
+            android:entries="@array/levelstudylist"
+            android:layout_marginTop="8dp"
+            />
+
+        <ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabelControl
+            android:id="@+id/coursenamespinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/course_name_title"
+            android:entries="@array/coursenamelist"
+            android:layout_marginTop="8dp"
+            />
+
+        <ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabelControl
+            android:id="@+id/yearstudyspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/year_of_study_title"
+            android:entries="@array/yearstudylist"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:id="@+id/textview_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:clickable="true"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/search_title"
+            android:focusable="true"
+            android:gravity="center"
+            android:fontFamily="Roboto"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/row_program"
+            />
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

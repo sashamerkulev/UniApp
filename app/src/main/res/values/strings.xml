@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">UniApp</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_program">Program module</string>
+    <string name="nav_notice">Notice board</string>
+    <string name="nav_library">Library</string>
+    <string name="nav_shop">Shop</string>
+    <string name="nav_accomodation">Accommodation</string>
+    <string name="nav_music">Music</string>
+    <string name="level_of_study_title">Level of study</string>
+    <string name="course_name_title">Course name</string>
+    <string name="year_of_study_title">Year of study</string>
+    <string name="search_title">Search</string>
+    <string name="program_name_title">Name</string>
+    <string name="program_year_title">Year</string>
+    <string name="program_degree_title">Degree</string>
+    <string name="program_course_title">Course</string>
+
+    <string-array name="levelstudylist">
+        <item>Certificate</item>
+        <item>Bachelors</item>
+        <item>Masters</item>
+    </string-array>
+
+    <string-array name="coursenamelist">
+        <item>course 1</item>
+        <item>course 2</item>
+        <item>course 3</item>
+    </string-array>
+
+    <string-array name="yearstudylist">
+        <item>1 year</item>
+        <item>2 year</item>
+        <item>3 year</item>
+        <item>4 year</item>
+    </string-array>
+
+</resources>
