@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by sasha_merkulev on 28.02.2018.
  */
 
-public class LibrarySearchItemUI {
+public class LibraryItemUI {
 
     private int id;
     private String author;
@@ -15,7 +15,7 @@ public class LibrarySearchItemUI {
     private String course;
     private Date date;
 
-    public LibrarySearchItemUI(int id, String author, String title, String subject, String course, Date date) {
+    public LibraryItemUI(int id, String author, String title, String subject, String course, Date date) {
         this.id = id;
         this.author = author;
         this.title = title;

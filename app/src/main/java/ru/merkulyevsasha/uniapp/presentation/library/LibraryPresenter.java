@@ -5,8 +5,7 @@ import javax.inject.Inject;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import ru.merkulyevsasha.domain_interfaces.library.LibraryInteractor;
 import ru.merkulyevsasha.uniapp.presentation.commons.BasePresenter;
-import ru.merkulyevsasha.uniapp.presentation.dto.LibrarySearchItemUI;
-import ru.merkulyevsasha.uniapp.presentation.dto.ProgramSearchItemUI;
+import ru.merkulyevsasha.uniapp.presentation.dto.LibraryItemUI;
 
 /**
  * Created by sasha_merkulev on 11.02.2018.
@@ -21,7 +20,7 @@ class LibraryPresenter extends BasePresenter<LibraryView>{
         this.library = library;
     }
 
-    void onSearchItemSelected(LibrarySearchItemUI item) {
+    void onSearchItemSelected(LibraryItemUI item) {
 
     }
 
@@ -30,7 +29,7 @@ class LibraryPresenter extends BasePresenter<LibraryView>{
                 .observeOn(AndroidSchedulers.mainThread())
                 .flattenAsFlowable(items -> items)
                 .map(libraryItem ->
-                        new LibrarySearchItemUI(libraryItem.getId(), libraryItem.getAuthor(),
+                        new LibraryItemUI(libraryItem.getId(), libraryItem.getAuthor(),
                                 libraryItem.getTitle(), libraryItem.getSubject(), libraryItem.getCourse(), libraryItem.getDate()))
                 .toList()
                 .filter(notUsed -> view != null)

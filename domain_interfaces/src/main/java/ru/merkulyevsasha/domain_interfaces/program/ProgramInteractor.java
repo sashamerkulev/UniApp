@@ -9,5 +9,7 @@ import io.reactivex.Single;
  */
 
 public interface ProgramInteractor {
-    Single<List<ProgramSearchItem>> search(String level, String course, String year);
+
+    Single<List<ProgramItem>> search(String level, String course, String year);
+
 }

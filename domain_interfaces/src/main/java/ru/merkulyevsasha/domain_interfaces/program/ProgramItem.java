@@ -4,7 +4,7 @@ package ru.merkulyevsasha.domain_interfaces.program;
  * Created by sasha_merkulev on 27.02.2018.
  */
 
-public class ProgramSearchItem {
+public class ProgramItem {
 
     private int id;
     private String course;
@@ -12,7 +12,7 @@ public class ProgramSearchItem {
     private String year;
     private String name;
 
-    public ProgramSearchItem(int id, String course, String degree, String year, String name) {
+    public ProgramItem(int id, String course, String degree, String year, String name) {
         this.id = id;
         this.course = course;
         this.degree = degree;

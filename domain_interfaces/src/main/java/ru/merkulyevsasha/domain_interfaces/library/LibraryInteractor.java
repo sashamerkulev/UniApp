@@ -10,6 +10,6 @@ import io.reactivex.Single;
 
 public interface LibraryInteractor {
 
-    public Single<List<LibraryItem>> search(String searchText);
+    Single<List<LibraryItem>> search(String searchText);
 
 }

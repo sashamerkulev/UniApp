@@ -21,8 +21,8 @@ import ru.merkulyevsasha.uniapp.presentation.commons.BaseFragment;
 import ru.merkulyevsasha.uniapp.presentation.commons.BaseRecyclerViewAdapter;
 import ru.merkulyevsasha.uniapp.presentation.commons.DiffUtillCallback;
 import ru.merkulyevsasha.uniapp.presentation.commons.ItemClickListener;
-import ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabelControl;
-import ru.merkulyevsasha.uniapp.presentation.dto.ProgramSearchItemUI;
+import ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabel;
+import ru.merkulyevsasha.uniapp.presentation.dto.ProgramItemUI;
 
 /**
  * Created by sasha_merkulev on 11.02.2018.
@@ -31,9 +31,9 @@ import ru.merkulyevsasha.uniapp.presentation.dto.ProgramSearchItemUI;
 public class ProgramFragment extends BaseFragment<ProgramView, ProgramPresenter> implements ProgramView {
 
 
-    @BindView(R.id.levelstudyspinner) SpinnerLabelControl level;
-    @BindView(R.id.coursenamespinner) SpinnerLabelControl course;
-    @BindView(R.id.yearstudyspinner) SpinnerLabelControl year;
+    @BindView(R.id.levelstudyspinner) SpinnerLabel level;
+    @BindView(R.id.coursenamespinner) SpinnerLabel course;
+    @BindView(R.id.yearstudyspinner) SpinnerLabel year;
     @BindView(R.id.textview_search) View search;
 
     @BindView(R.id.recyclerview) RecyclerView recyclerView;
@@ -59,7 +59,7 @@ public class ProgramFragment extends BaseFragment<ProgramView, ProgramPresenter>
         lm = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(lm);
         adapter = new ProgramSearchAdapter(getContext(), new ArrayList<>(),
-                new DiffUtillCallback<ProgramSearchItemUI>(),
+                new DiffUtillCallback<ProgramItemUI>(),
                 item -> pres.onSearchItemSelected(item) );
         recyclerView.setAdapter(adapter);
 
@@ -69,7 +69,7 @@ public class ProgramFragment extends BaseFragment<ProgramView, ProgramPresenter>
     }
 
     @Override
-    public void showItems(List<ProgramSearchItemUI> items) {
+    public void showItems(List<ProgramItemUI> items) {
         adapter.setItems(items);
     }
 
@@ -78,11 +78,11 @@ public class ProgramFragment extends BaseFragment<ProgramView, ProgramPresenter>
 
     }
 
-    class ProgramSearchAdapter extends BaseRecyclerViewAdapter<ProgramSearchItemUI>{
+    class ProgramSearchAdapter extends BaseRecyclerViewAdapter<ProgramItemUI>{
 
-        ProgramSearchAdapter(Context context, List<ProgramSearchItemUI> items,
-                                    DiffUtillCallback<ProgramSearchItemUI> diffCallback,
-                                    ItemClickListener<ProgramSearchItemUI> itemClickListener) {
+        ProgramSearchAdapter(Context context, List<ProgramItemUI> items,
+                                    DiffUtillCallback<ProgramItemUI> diffCallback,
+                                    ItemClickListener<ProgramItemUI> itemClickListener) {
             super(context, items, diffCallback, itemClickListener);
         }
 
@@ -93,11 +93,11 @@ public class ProgramFragment extends BaseFragment<ProgramView, ProgramPresenter>
 
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            if (viewType == ProgramSearchItemUI.HEADER_VIEW_TYPE) {
+            if (viewType == ProgramItemUI.HEADER_VIEW_TYPE) {
                 View view = inflater.inflate(R.layout.row_program_header, parent, false);
                 return new ProgramHeaderViewHolder(view);
             }
-            if (viewType == ProgramSearchItemUI.ITEM_VIEW_TYPE) {
+            if (viewType == ProgramItemUI.ITEM_VIEW_TYPE) {
                 View view = inflater.inflate(R.layout.row_program, parent, false);
                 return new RowItemViewHolder(view);
             }
@@ -111,7 +111,7 @@ public class ProgramFragment extends BaseFragment<ProgramView, ProgramPresenter>
         }
 
         private void bindRowItemViewHolder(RowItemViewHolder holder, int position) {
-            ProgramSearchItemUI item = items.get(position);
+            ProgramItemUI item = items.get(position);
             holder.course.setText(item.getCourse());
             holder.degree.setText(item.getDegree());
             holder.year.setText(item.getYear());

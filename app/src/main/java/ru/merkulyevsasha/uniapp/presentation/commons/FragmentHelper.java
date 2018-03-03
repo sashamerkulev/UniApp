@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
 import ru.merkulyevsasha.uniapp.R;
-import ru.merkulyevsasha.uniapp.presentation.accomodation.AccomodationFragment;
+import ru.merkulyevsasha.uniapp.presentation.accommodation.AccommodationFragment;
 import ru.merkulyevsasha.uniapp.presentation.library.LibraryFragment;
 import ru.merkulyevsasha.uniapp.presentation.music.MusicFragment;
 import ru.merkulyevsasha.uniapp.presentation.notice.NoticeFragment;
@@ -93,7 +93,7 @@ public class FragmentHelper {
         if (fragment == null){
             switch (tag) {
                 case ACCOMODATION_TAG:
-                    fragment = AccomodationFragment.getInstance();
+                    fragment = AccommodationFragment.getInstance();
                     break;
                 case LIBRARY_TAG:
                     fragment = LibraryFragment.getInstance();

@@ -4,7 +4,7 @@ package ru.merkulyevsasha.uniapp.presentation.dto;
  * Created by sasha_merkulev on 27.02.2018.
  */
 
-public class ProgramSearchItemUI {
+public class ProgramItemUI {
 
     public static int HEADER_VIEW_TYPE = 0;
     public static int ITEM_VIEW_TYPE = 1;
@@ -16,17 +16,17 @@ public class ProgramSearchItemUI {
     private String name;
     private int viewHolderType;
 
-    public static ProgramSearchItemUI createHeader(){
-        ProgramSearchItemUI result = new ProgramSearchItemUI();
+    public static ProgramItemUI createHeader(){
+        ProgramItemUI result = new ProgramItemUI();
         result.setViewHolderType(HEADER_VIEW_TYPE);
         return result;
     }
 
-    public ProgramSearchItemUI(){
+    public ProgramItemUI(){
         viewHolderType = ITEM_VIEW_TYPE;
     }
 
-    public ProgramSearchItemUI(int id, String course, String degree, String year, String name) {
+    public ProgramItemUI(int id, String course, String degree, String year, String name) {
         this();
         this.id = id;
         this.course = course;

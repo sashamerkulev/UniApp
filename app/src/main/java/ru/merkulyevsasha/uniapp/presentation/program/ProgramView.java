@@ -3,7 +3,7 @@ package ru.merkulyevsasha.uniapp.presentation.program;
 import java.util.List;
 
 import ru.merkulyevsasha.uniapp.presentation.commons.BaseView;
-import ru.merkulyevsasha.uniapp.presentation.dto.ProgramSearchItemUI;
+import ru.merkulyevsasha.uniapp.presentation.dto.ProgramItemUI;
 
 /**
  * Created by sasha_merkulev on 11.02.2018.
@@ -11,7 +11,7 @@ import ru.merkulyevsasha.uniapp.presentation.dto.ProgramSearchItemUI;
 
 interface ProgramView extends BaseView {
 
-    void showItems(List<ProgramSearchItemUI> items);
+    void showItems(List<ProgramItemUI> items);
     void showNotFoundMessage();
 
 }

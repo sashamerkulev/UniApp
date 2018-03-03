@@ -19,14 +19,14 @@ import ru.merkulyevsasha.uniapp.R;
  * Created by sasha_merkulev on 26.02.2018.
  */
 
-public class SpinnerLabelControl extends RelativeLayout {
+public class SpinnerLabel extends RelativeLayout {
 
     private final static String xmlns="http://schemas.android.com/apk/res/android";
 
     @BindView(R.id.label) TextView label;
     @BindView(R.id.spinner) Spinner spinner;
 
-    public SpinnerLabelControl(@NonNull Context context, AttributeSet attrs) {
+    public SpinnerLabel(@NonNull Context context, AttributeSet attrs) {
         super(context, attrs);
 
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

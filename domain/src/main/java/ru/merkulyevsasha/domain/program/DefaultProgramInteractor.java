@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import io.reactivex.Scheduler;
 import io.reactivex.Single;
 import ru.merkulyevsasha.domain_interfaces.program.ProgramInteractor;
-import ru.merkulyevsasha.domain_interfaces.program.ProgramSearchItem;
+import ru.merkulyevsasha.domain_interfaces.program.ProgramItem;
 import ru.merkulyevsasha.repository_interfaces.ProgramRepository;
 
 /**
@@ -26,7 +26,7 @@ public class DefaultProgramInteractor implements ProgramInteractor {
     }
 
     @Override
-    public Single<List<ProgramSearchItem>> search(String level, String course, String year) {
+    public Single<List<ProgramItem>> search(String level, String course, String year) {
         return repository.search(level, course, year)
                 .subscribeOn(scheduler);
     }

@@ -24,9 +24,7 @@ import ru.merkulyevsasha.uniapp.presentation.commons.BaseFragment;
 import ru.merkulyevsasha.uniapp.presentation.commons.BaseRecyclerViewAdapter;
 import ru.merkulyevsasha.uniapp.presentation.commons.DiffUtillCallback;
 import ru.merkulyevsasha.uniapp.presentation.commons.ItemClickListener;
-import ru.merkulyevsasha.uniapp.presentation.dto.LibrarySearchItemUI;
-import ru.merkulyevsasha.uniapp.presentation.dto.ProgramSearchItemUI;
-import ru.merkulyevsasha.uniapp.presentation.program.ProgramFragment;
+import ru.merkulyevsasha.uniapp.presentation.dto.LibraryItemUI;
 
 /**
  * Created by sasha_merkulev on 11.02.2018.
@@ -58,7 +56,7 @@ public class LibraryFragment extends BaseFragment<LibraryView, LibraryPresenter>
         lm = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(lm);
         adapter = new LibrarySearchAdapter(getContext(), new ArrayList<>(),
-                new DiffUtillCallback<LibrarySearchItemUI>(),
+                new DiffUtillCallback<LibraryItemUI>(),
                 item -> pres.onSearchItemSelected(item) );
         recyclerView.setAdapter(adapter);
 
@@ -85,7 +83,7 @@ public class LibraryFragment extends BaseFragment<LibraryView, LibraryPresenter>
     }
 
     @Override
-    public void showItems(List<LibrarySearchItemUI> items) {
+    public void showItems(List<LibraryItemUI> items) {
         adapter.setItems(items);
     }
 
@@ -94,11 +92,11 @@ public class LibraryFragment extends BaseFragment<LibraryView, LibraryPresenter>
 
     }
 
-    class LibrarySearchAdapter extends BaseRecyclerViewAdapter<LibrarySearchItemUI> {
+    class LibrarySearchAdapter extends BaseRecyclerViewAdapter<LibraryItemUI> {
 
-        LibrarySearchAdapter(Context context, List<LibrarySearchItemUI> items,
-                             DiffUtillCallback<LibrarySearchItemUI> diffCallback,
-                             ItemClickListener<LibrarySearchItemUI> itemClickListener) {
+        LibrarySearchAdapter(Context context, List<LibraryItemUI> items,
+                             DiffUtillCallback<LibraryItemUI> diffCallback,
+                             ItemClickListener<LibraryItemUI> itemClickListener) {
             super(context, items, diffCallback, itemClickListener);
         }
 
@@ -111,7 +109,7 @@ public class LibraryFragment extends BaseFragment<LibraryView, LibraryPresenter>
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
-            LibrarySearchItemUI item = items.get(position);
+            LibraryItemUI item = items.get(position);
 
             LibraryViewHolder library = (LibraryViewHolder)holder;
 

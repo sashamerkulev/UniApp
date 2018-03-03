@@ -33,7 +33,7 @@
         android:paddingEnd="16dp"
         >
 
-        <ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabelControl
+        <ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabel
             android:id="@+id/levelstudyspinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             android:layout_marginTop="8dp"
             />
 
-        <ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabelControl
+        <ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabel
             android:id="@+id/coursenamespinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             android:layout_marginTop="8dp"
             />
 
-        <ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabelControl
+        <ru.merkulyevsasha.uniapp.presentation.controls.SpinnerLabel
             android:id="@+id/yearstudyspinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

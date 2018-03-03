@@ -5,7 +5,7 @@ import javax.inject.Inject;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import ru.merkulyevsasha.domain_interfaces.program.ProgramInteractor;
 import ru.merkulyevsasha.uniapp.presentation.commons.BasePresenter;
-import ru.merkulyevsasha.uniapp.presentation.dto.ProgramSearchItemUI;
+import ru.merkulyevsasha.uniapp.presentation.dto.ProgramItemUI;
 
 /**
  * Created by sasha_merkulev on 11.02.2018.
@@ -20,7 +20,7 @@ class ProgramPresenter extends BasePresenter<ProgramView> {
         this.program = program;
     }
 
-    void onSearchItemSelected(ProgramSearchItemUI item) {
+    void onSearchItemSelected(ProgramItemUI item) {
 
     }
 
@@ -29,9 +29,9 @@ class ProgramPresenter extends BasePresenter<ProgramView> {
         .observeOn(AndroidSchedulers.mainThread())
                 .flattenAsFlowable(items -> items)
                 .map(programSearchItem ->
-                        new ProgramSearchItemUI(programSearchItem.getId(), programSearchItem.getCourse(),
+                        new ProgramItemUI(programSearchItem.getId(), programSearchItem.getCourse(),
                                 programSearchItem.getDegree(), programSearchItem.getYear(), programSearchItem.getName()))
-                .startWith(ProgramSearchItemUI.createHeader())
+                .startWith(ProgramItemUI.createHeader())
                 .toList()
                 .filter(notUsed -> view != null)
                 .subscribe(
